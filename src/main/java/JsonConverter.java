@@ -2,11 +2,11 @@ import java.io.*;
 
 public class JsonConverter {
     public static void main(String[] args) {
-        final var jsonConverter = new JsonConverter();
-        jsonConverter.jsonConverter("file2.txt", "user.json");
+        //final var jsonConverter = new JsonConverter();
+        jsonConverter("file2.txt", "user.json");
     }
 
-    public void jsonConverter(String inputFile, String outputFile) {
+    public static void jsonConverter(String inputFile, String outputFile) {
         try (final var reader = new BufferedReader(new FileReader(inputFile));
              final var writer = new BufferedWriter(new FileWriter(outputFile))
         ) {
